@@ -1,5 +1,5 @@
 {
-  "name": "react-loadable",
+  "name": "react-loadable-ex",
   "version": "3.0.1",
   "description": "A higher order component for loading components with promises",
   "main": "lib/index.js",

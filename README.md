@@ -1,4 +1,4 @@
-# `react-loadable`
+# `react-loadable-ex`
 
 A higher order component for loading components with promises.
 
@@ -15,6 +15,10 @@ A higher order component for loading components with promises.
 Example Project: https://github.com/thejameskyle/react-loadable-example
 
 Introductory blog post: https://medium.com/@thejameskyle/react-loadable-2674c59de178#.6h46yjgwr
+### Changes from upstream
+
+- Returns a promise on .preload() so that you can conditionally wait until it is ready.
+- Makes LoadingComponent optional
 
 ### Example
 
