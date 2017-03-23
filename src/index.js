@@ -78,7 +78,7 @@ export default function Loadable<Props: {}, Err: Error>(opts: Options) {
     _mounted: boolean;
 
     static preload() {
-      load();
+      return load();
     }
 
     state = {
@@ -121,13 +121,13 @@ export default function Loadable<Props: {}, Err: Error>(opts: Options) {
       let { pastDelay, error, Component } = this.state;
 
       if (isLoading || error) {
-        return (!LoadingComponent ? null :
-          <LoadingComponent
-            isLoading={isLoading}
-            pastDelay={pastDelay}
-            error={error}
-          />
-        );
+        return !LoadingComponent
+          ? null
+          : <LoadingComponent
+              isLoading={isLoading}
+              pastDelay={pastDelay}
+              error={error}
+            />;
       } else if (Component) {
         return <Component {...this.props} />;
       } else {
